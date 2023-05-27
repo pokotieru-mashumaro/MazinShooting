@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		975DEF102A21F3FA0082BFA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975DEF0F2A21F3FA0082BFA5 /* AppDelegate.swift */; };
-		975DEF122A21F3FA0082BFA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975DEF112A21F3FA0082BFA5 /* ContentView.swift */; };
-		975DEF142A21F3FA0082BFA5 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 975DEF132A21F3FA0082BFA5 /* Experience.rcproject */; };
+		975DEF122A21F3FA0082BFA5 /* ARTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975DEF112A21F3FA0082BFA5 /* ARTitleView.swift */; };
 		975DEF162A21F3FB0082BFA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 975DEF152A21F3FB0082BFA5 /* Assets.xcassets */; };
 		975DEF192A21F3FB0082BFA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 975DEF182A21F3FB0082BFA5 /* Preview Assets.xcassets */; };
 		975DEF232A21F3FB0082BFA5 /* MazinShootingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975DEF222A21F3FB0082BFA5 /* MazinShootingTests.swift */; };
 		975DEF2D2A21F3FB0082BFA5 /* MazinShootingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975DEF2C2A21F3FB0082BFA5 /* MazinShootingUITests.swift */; };
 		975DEF2F2A21F3FB0082BFA5 /* MazinShootingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975DEF2E2A21F3FB0082BFA5 /* MazinShootingUITestsLaunchTests.swift */; };
+		975DEF3C2A2213C40082BFA5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 975DEF3B2A2213C40082BFA5 /* Launch Screen.storyboard */; };
+		975DEF3F2A2217C40082BFA5 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975DEF3E2A2217C40082BFA5 /* GameInfo.swift */; };
+		975DEF422A221A470082BFA5 /* ARShootingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975DEF412A221A470082BFA5 /* ARShootingView.swift */; };
+		975DEF442A221CF80082BFA5 /* ARShootingView+Coaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975DEF432A221CF80082BFA5 /* ARShootingView+Coaching.swift */; };
+		975DEF462A22231A0082BFA5 /* GameStages.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 975DEF452A2221880082BFA5 /* GameStages.rcproject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +41,7 @@
 /* Begin PBXFileReference section */
 		975DEF0C2A21F3FA0082BFA5 /* MazinShooting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazinShooting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		975DEF0F2A21F3FA0082BFA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		975DEF112A21F3FA0082BFA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		975DEF132A21F3FA0082BFA5 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		975DEF112A21F3FA0082BFA5 /* ARTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTitleView.swift; sourceTree = "<group>"; };
 		975DEF152A21F3FB0082BFA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		975DEF182A21F3FB0082BFA5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		975DEF1E2A21F3FB0082BFA5 /* MazinShootingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazinShootingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +49,12 @@
 		975DEF282A21F3FB0082BFA5 /* MazinShootingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazinShootingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		975DEF2C2A21F3FB0082BFA5 /* MazinShootingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazinShootingUITests.swift; sourceTree = "<group>"; };
 		975DEF2E2A21F3FB0082BFA5 /* MazinShootingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazinShootingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		975DEF3B2A2213C40082BFA5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		975DEF3D2A2213F70082BFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		975DEF3E2A2217C40082BFA5 /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
+		975DEF412A221A470082BFA5 /* ARShootingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARShootingView.swift; sourceTree = "<group>"; };
+		975DEF432A221CF80082BFA5 /* ARShootingView+Coaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARShootingView+Coaching.swift"; sourceTree = "<group>"; };
+		975DEF452A2221880082BFA5 /* GameStages.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = GameStages.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +105,15 @@
 		975DEF0E2A21F3FA0082BFA5 /* MazinShooting */ = {
 			isa = PBXGroup;
 			children = (
+				975DEF3D2A2213F70082BFA5 /* Info.plist */,
 				975DEF0F2A21F3FA0082BFA5 /* AppDelegate.swift */,
-				975DEF112A21F3FA0082BFA5 /* ContentView.swift */,
-				975DEF132A21F3FA0082BFA5 /* Experience.rcproject */,
+				975DEF112A21F3FA0082BFA5 /* ARTitleView.swift */,
+				975DEF3E2A2217C40082BFA5 /* GameInfo.swift */,
+				975DEF452A2221880082BFA5 /* GameStages.rcproject */,
+				975DEF412A221A470082BFA5 /* ARShootingView.swift */,
+				975DEF432A221CF80082BFA5 /* ARShootingView+Coaching.swift */,
 				975DEF152A21F3FB0082BFA5 /* Assets.xcassets */,
+				975DEF3B2A2213C40082BFA5 /* Launch Screen.storyboard */,
 				975DEF172A21F3FB0082BFA5 /* Preview Content */,
 			);
 			path = MazinShooting;
@@ -216,6 +230,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 975DEF032A21F3FA0082BFA5;
 			productRefGroup = 975DEF0D2A21F3FA0082BFA5 /* Products */;
@@ -234,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				975DEF3C2A2213C40082BFA5 /* Launch Screen.storyboard in Resources */,
 				975DEF192A21F3FB0082BFA5 /* Preview Assets.xcassets in Resources */,
 				975DEF162A21F3FB0082BFA5 /* Assets.xcassets in Resources */,
 			);
@@ -260,9 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				975DEF122A21F3FA0082BFA5 /* ContentView.swift in Sources */,
+				975DEF462A22231A0082BFA5 /* GameStages.rcproject in Sources */,
+				975DEF122A21F3FA0082BFA5 /* ARTitleView.swift in Sources */,
 				975DEF102A21F3FA0082BFA5 /* AppDelegate.swift in Sources */,
-				975DEF142A21F3FA0082BFA5 /* Experience.rcproject in Sources */,
+				975DEF3F2A2217C40082BFA5 /* GameInfo.swift in Sources */,
+				975DEF442A221CF80082BFA5 /* ARShootingView+Coaching.swift in Sources */,
+				975DEF422A221A470082BFA5 /* ARShootingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,9 +443,11 @@
 				DEVELOPMENT_TEAM = FYPDVM3FRG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MazinShooting/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -455,9 +476,11 @@
 				DEVELOPMENT_TEAM = FYPDVM3FRG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MazinShooting/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
