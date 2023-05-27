@@ -124,21 +124,21 @@
               "title" : "Stage1",
               "viewTransform" : {
                 "cameraTransform" : [
-                  0.99999994039535522,
+                  0.87479192018508911,
+                  4.7477133335860344e-10,
+                  0.48449873924255371,
                   0,
+                  0.20898048579692841,
+                  0.90219253301620483,
+                  -0.37732693552970886,
                   0,
+                  -0.43711122870445251,
+                  0.43133342266082764,
+                  0.7892308235168457,
                   0,
-                  0,
-                  0.8075486421585083,
-                  -0.58980107307434082,
-                  0,
-                  0,
-                  0.58980107307434082,
-                  0.8075486421585083,
-                  0,
-                  -0.0031232237815856934,
-                  1.2757062911987305,
-                  1.4526631832122803,
+                  -1.2224109172821045,
+                  1.7121305465698242,
+                  1.5108444690704346,
                   1
                 ],
                 "sceneTransform" : [
@@ -153,6 +153,269 @@
                   0,
                   0,
                   0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            }
+          ],
+          "__version" : 5
+        },
+        {
+          "__content" : [
+            {
+              "arAnchorSpecification" : {
+                "alignment" : "horizontal",
+                "name" : "surface"
+              },
+              "behaviors" : [
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "angularCoefficient" : 1,
+                                          "duration" : 0.40000000596046448,
+                                          "isTransformInitKeyPath" : true,
+                                          "linearCoefficient" : 1,
+                                          "location" : [
+                                            0,
+                                            0,
+                                            -3
+                                          ],
+                                          "moveEase" : "none",
+                                          "respectPhysics" : false,
+                                          "target" : [
+                                            "F1076FEA-F834-460E-BF1F-B077CD5C3042"
+                                          ]
+                                        },
+                                        "name" : {
+                                          "arguments" : "local",
+                                          "type" : "transform"
+                                        }
+                                      },
+                                      "identifier" : "9AC84E83-BB45-4FDA-95AE-E1CE368D9C83",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                },
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "audioType" : "play",
+                                          "filePath" : "audio:d7c42e180c8043d680157528b9e97570\/ShootSound.wav",
+                                          "loops" : false,
+                                          "multiplePerformType" : "ignore request",
+                                          "target" : [
+                                            "F1076FEA-F834-460E-BF1F-B077CD5C3042"
+                                          ],
+                                          "volume" : 0.5
+                                        },
+                                        "name" : {
+                                          "type" : "audio"
+                                        }
+                                      },
+                                      "identifier" : "1597A496-D4B7-44F3-B267-9475448C12E1",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "A6BE5A47-A943-4A6B-8B7A-78192A154214",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.364705890417099,
+                        0.74117648601531982,
+                        0.69019609689712524,
+                        1
+                      ],
+                      "identifier" : "F21C51E3-4949-4100-AF93-3076F370CD0F",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "ビヘイビア",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+
+                                },
+                                "name" : "start"
+                              },
+                              "identifier" : "342F9840-F087-4668-968B-6F6B080180DF",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                }
+              ],
+              "gravity" : [
+                0,
+                -9.8000001907348633,
+                0
+              ],
+              "identifier" : "2CAF2549-B6E2-49D5-974E-BCDA58FC50BF",
+              "material" : "concrete",
+              "overrides" : {
+                "children" : {
+                  "537D72D2-A5D7-4E4E-B6C8-8D638B826FD0" : null,
+                  "B0034310-4BC3-4263-83F9-A7FB6BE8A650" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Cheeseburger"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "1E01679F-F096-49FD-8EC9-BA4057A7D28A"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.Cheeseburger.2a5e4cad-5f1d-4b97-8ae0-2c5814ca6a80",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "F1076FEA-F834-460E-BF1F-B077CD5C3042"
+                          }
+                        ],
+                        [
+                          "entityName",
+                          {
+                            "typeName" : "String",
+                            "value" : "SelfBullet"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                      ]
+                    }
+                  },
+                  "Cube" : null
+                },
+                "factory" : null,
+                "runtimeAttributes" : [
+                  [
+                    "isAccessibilityEnabled",
+                    {
+                      "typeName" : "Bool",
+                      "value" : false
+                    }
+                  ]
+                ]
+              },
+              "physicsMode" : "grid",
+              "title" : "Bullet",
+              "viewTransform" : {
+                "cameraTransform" : [
+                  0.75417900085449219,
+                  -7.0618959568946593e-09,
+                  0.65666878223419189,
+                  0,
+                  0.07314746081829071,
+                  0.99377655982971191,
+                  -0.084009319543838501,
+                  0,
+                  -0.65258204936981201,
+                  0.11139170825481415,
+                  0.74948549270629883,
+                  0,
+                  -1.3155487775802612,
+                  0.33350762724876404,
+                  1.9549837112426758,
+                  1
+                ],
+                "sceneTransform" : [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
                   0,
                   0,
                   0,

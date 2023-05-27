@@ -14,6 +14,13 @@ struct ARTitleView : View {
         ZStack {
             ARViewContainer(gameInfo: gameInfo)
 
+            if gameInfo.gameState != .menu {
+                Image("Aim")
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                    .offset(y: -25)
+            }
+
             VStack(spacing: 200) {
 
                 if gameInfo.gameState == .menu {

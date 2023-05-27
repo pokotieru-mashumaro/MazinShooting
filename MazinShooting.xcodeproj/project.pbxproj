@@ -19,6 +19,7 @@
 		975DEF422A221A470082BFA5 /* ARShootingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975DEF412A221A470082BFA5 /* ARShootingView.swift */; };
 		975DEF442A221CF80082BFA5 /* ARShootingView+Coaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975DEF432A221CF80082BFA5 /* ARShootingView+Coaching.swift */; };
 		975DEF462A22231A0082BFA5 /* GameStages.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 975DEF452A2221880082BFA5 /* GameStages.rcproject */; };
+		9794B9EA2A223CF80033FC18 /* BulletSphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9794B9E92A223CF80033FC18 /* BulletSphere.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		975DEF412A221A470082BFA5 /* ARShootingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARShootingView.swift; sourceTree = "<group>"; };
 		975DEF432A221CF80082BFA5 /* ARShootingView+Coaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARShootingView+Coaching.swift"; sourceTree = "<group>"; };
 		975DEF452A2221880082BFA5 /* GameStages.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = GameStages.rcproject; sourceTree = "<group>"; };
+		9794B9E92A223CF80033FC18 /* BulletSphere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletSphere.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				975DEF3D2A2213F70082BFA5 /* Info.plist */,
 				975DEF0F2A21F3FA0082BFA5 /* AppDelegate.swift */,
+				9794B9E82A223CC50033FC18 /* ModelEntity */,
 				975DEF112A21F3FA0082BFA5 /* ARTitleView.swift */,
 				975DEF3E2A2217C40082BFA5 /* GameInfo.swift */,
 				975DEF452A2221880082BFA5 /* GameStages.rcproject */,
@@ -142,6 +145,14 @@
 				975DEF2E2A21F3FB0082BFA5 /* MazinShootingUITestsLaunchTests.swift */,
 			);
 			path = MazinShootingUITests;
+			sourceTree = "<group>";
+		};
+		9794B9E82A223CC50033FC18 /* ModelEntity */ = {
+			isa = PBXGroup;
+			children = (
+				9794B9E92A223CF80033FC18 /* BulletSphere.swift */,
+			);
+			path = ModelEntity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9794B9EA2A223CF80033FC18 /* BulletSphere.swift in Sources */,
 				975DEF462A22231A0082BFA5 /* GameStages.rcproject in Sources */,
 				975DEF122A21F3FA0082BFA5 /* ARTitleView.swift in Sources */,
 				975DEF102A21F3FA0082BFA5 /* AppDelegate.swift in Sources */,
