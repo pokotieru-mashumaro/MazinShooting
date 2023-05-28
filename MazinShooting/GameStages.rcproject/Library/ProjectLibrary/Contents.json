@@ -3,5 +3,10 @@
     "libraryIdentifier" : "d7c42e180c8043d680157528b9e97570",
     "format" : "audio",
     "displayName" : "ShootSound.wav"
+  },
+  {
+    "libraryIdentifier" : "bfdc95a58a69fae3ae8125e791b3449e",
+    "format" : "audio",
+    "displayName" : "HitSound.wav"
   }
 ]

@@ -10,7 +10,187 @@
                 "name" : "surface"
               },
               "behaviors" : [
-
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "audioType" : "play",
+                                          "filePath" : "audio:bfdc95a58a69fae3ae8125e791b3449e\/HitSound.wav",
+                                          "loops" : false,
+                                          "multiplePerformType" : "ignore request",
+                                          "target" : [
+                                            "EF764974-E1FB-46B8-889D-DA0D035598C4"
+                                          ],
+                                          "volume" : 0.5
+                                        },
+                                        "name" : {
+                                          "type" : "audio"
+                                        }
+                                      },
+                                      "identifier" : "FD9A823C-817B-45B9-8C76-9422BEA7C3AD",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                },
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "angularCoefficient" : 1,
+                                          "animationStyle" : "basic",
+                                          "buildInAnimationType" : "none",
+                                          "distance" : 1,
+                                          "duration" : 0.5,
+                                          "fadeIn" : true,
+                                          "linearCoefficient" : 1,
+                                          "moveEase" : "easeInOut",
+                                          "respectPhysics" : false,
+                                          "target" : [
+                                            "EF764974-E1FB-46B8-889D-DA0D035598C4"
+                                          ]
+                                        },
+                                        "name" : {
+                                          "type" : "show"
+                                        }
+                                      },
+                                      "identifier" : "11A80243-59C3-4647-85D0-192969A07093",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "D9F3CAE7-CD6B-4300-BC7B-466FFB04BE28",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.364705890417099,
+                        0.74117648601531982,
+                        0.69019609689712524,
+                        1
+                      ],
+                      "identifier" : "098D0947-33B4-4E29-9731-B95ABC6FEFBA",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "敵に攻撃",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "userIdentifier" : "hitRocket1"
+                                },
+                                "name" : "custom"
+                              },
+                              "identifier" : "BC24B847-D456-4167-95DD-EC010520EB56",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                },
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "targetScene" : "6FA1FC9A-7955-4D7E-A70D-2A45B9C69563"
+                                        },
+                                        "name" : {
+                                          "type" : "changeScene"
+                                        }
+                                      },
+                                      "identifier" : "4AE19592-77CD-4601-8016-60BBE1A91E9D",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "65A950B8-5513-4D6F-86E4-C92B26A4A334",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.21568627655506134,
+                        0.72549021244049072,
+                        0.80000001192092896,
+                        1
+                      ],
+                      "identifier" : "9B8C85B3-4450-421B-8DBA-E75A710C137B",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "ステージ2に遷移",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "userIdentifier" : "changeStage2"
+                                },
+                                "name" : "custom"
+                              },
+                              "identifier" : "A3C2A45A-2C80-452C-8551-617D7BBE5450",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                }
               ],
               "gravity" : [
                 0,
@@ -136,9 +316,9 @@
                   0.43133342266082764,
                   0.7892308235168457,
                   0,
-                  -1.2224109172821045,
-                  1.7121305465698242,
-                  1.5108444690704346,
+                  -1.0376765727996826,
+                  1.8236865997314453,
+                  1.5521899461746216,
                   1
                 ],
                 "sceneTransform" : [
@@ -402,6 +582,83 @@
                   -1.3155487775802612,
                   0.33350762724876404,
                   1.9549837112426758,
+                  1
+                ],
+                "sceneTransform" : [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            }
+          ],
+          "__version" : 5
+        },
+        {
+          "__content" : [
+            {
+              "arAnchorSpecification" : {
+                "alignment" : "horizontal",
+                "name" : "surface"
+              },
+              "behaviors" : [
+
+              ],
+              "gravity" : [
+                0,
+                -9.8000001907348633,
+                0
+              ],
+              "identifier" : "6FA1FC9A-7955-4D7E-A70D-2A45B9C69563",
+              "material" : "concrete",
+              "overrides" : {
+                "children" : {
+                  "CFB86580-D8F3-4CBC-B35D-1BC8521A6644" : null,
+                  "Cube" : null
+                },
+                "factory" : null,
+                "runtimeAttributes" : [
+                  [
+                    "isAccessibilityEnabled",
+                    {
+                      "typeName" : "Bool",
+                      "value" : false
+                    }
+                  ]
+                ]
+              },
+              "physicsMode" : "grid",
+              "title" : "Stage2",
+              "viewTransform" : {
+                "cameraTransform" : [
+                  0.88119179010391235,
+                  -1.6980512551612037e-09,
+                  -0.47275900840759277,
+                  0,
+                  -0.26614212989807129,
+                  0.82648736238479614,
+                  -0.496071457862854,
+                  0,
+                  0.39072933793067932,
+                  0.56295526027679443,
+                  0.72829389572143555,
+                  0,
+                  0.88979339599609375,
+                  1.3250086307525635,
+                  1.6670575141906738,
                   1
                 ],
                 "sceneTransform" : [

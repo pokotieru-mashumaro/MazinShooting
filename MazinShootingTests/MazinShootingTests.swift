@@ -2,8 +2,6 @@
 //  MazinShootingTests.swift
 //  MazinShootingTests
 //
-//  Created by 小松虎太郎 on 2023/05/27.
-//
 
 import XCTest
 @testable import MazinShooting

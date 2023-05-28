@@ -2,8 +2,7 @@
 //  GameInfo.swift
 //  MazinShooting
 //
-//  Created by 小松虎太郎 on 2023/05/27.
-//
+
 import SwiftUI
 
 enum GameState {
@@ -26,6 +25,7 @@ enum GameState {
 
 final class GameInfo: ObservableObject {
     @Published var gameState: GameState = .menu
+    @Published var selfLife: Int = 10
 }
 
 
