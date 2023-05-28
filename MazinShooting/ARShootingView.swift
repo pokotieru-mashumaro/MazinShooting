@@ -7,9 +7,9 @@ import SwiftUI
 import ARKit
 import RealityKit
 import Combine
-import MultipeerConnectivity
 import AVFoundation
 
+let ShootSound = NSDataAsset(name: "ShootSound")!.data
 let HitSound = NSDataAsset(name: "HitSound")!.data
 var soundPlayer:AVAudioPlayer!
 
@@ -296,7 +296,6 @@ class ARShootingView: UIView, ARSessionDelegate {
     }
 
     func setupGestureRecognizers() {
-
         // タップして撃つ
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(addBulletAnchor(recognizer:)))
 
@@ -368,7 +367,7 @@ class ARShootingView: UIView, ARSessionDelegate {
         //          let hitSound = try! AudioFileResource.load(named: "ShootSound.wav")
         //          bulletEntity.bullet.playAudio(hitSound)
         do {
-            soundPlayer = try AVAudioPlayer(data: HitSound)
+            soundPlayer = try AVAudioPlayer(data: ShootSound)
             soundPlayer.play()
         } catch {
             print("音の再生に失敗しました。")
@@ -386,14 +385,9 @@ class ARShootingView: UIView, ARSessionDelegate {
 
     // ARAnchorが追加されると呼ばれます
     func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
-
         for anchor in anchors {
-
             if let anchorName = anchor.name, anchorName == EntityName.bulletAnchor {
-                //MARK: どっちにするか、悩めばイイ！！
-                //                  bulletShot(named: EntityName.bullet, for: anchor)
                 bulletShotCode(named: EntityName.bullet, for: anchor)
-
             }
         }
     }
