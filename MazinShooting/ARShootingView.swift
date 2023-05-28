@@ -8,6 +8,10 @@ import ARKit
 import RealityKit
 import Combine
 import MultipeerConnectivity
+import AVFoundation
+
+let HitSound = NSDataAsset(name: "HitSound")!.data
+var soundPlayer:AVAudioPlayer!
 
 struct EntityName {
     static let bulletAnchor = "BulletAnchor"
@@ -30,9 +34,17 @@ struct StageModel {
     // ステージ1
     var rocket1 = ModelInfo(name: "Rocket1", life: 10)
 
-    func stage1() -> Array<ModelInfo> {
+    // ステージ2
+    var rocket2 = ModelInfo(name: "Rocket2", life: 10)
+    var drummer2 = ModelInfo(name: "Drummer2", life: 10)
+
+    func stage1() -> [ModelInfo] {
         return [rocket1]
     }
+
+    func stage2() -> [ModelInfo] {
+         return [rocket2, drummer2]
+     }
 }
 
 class ARShootingView: UIView, ARSessionDelegate {
@@ -75,8 +87,21 @@ class ARShootingView: UIView, ARSessionDelegate {
 
         // ゲーム情報の受け取りタスク
         self.gameInfoTask = gameInfo.$gameState.receive(on: DispatchQueue.main).sink { (value) in
+            if value == .menu {
+                if self.startFlg {
+                    self.gameInfo.selfLife = 10
+                    self.stageModel.rocket1.life = 10
+                    self.stageModel.rocket2.life = 10
+                    self.stageModel.drummer2.life = 10
 
-            if value == .placingContent {
+                    self.gameAnchor.removeFromParent()
+
+                    self.gameAnchor = try! GameStages.loadStage1()
+
+                    self.arView.scene.addAnchor(self.gameAnchor)
+                }
+            }
+            else if value == .placingContent {
                 if !self.startFlg {
                     self.setupConfiguration()
                     self.addCoachingOverlayView()
@@ -149,14 +174,17 @@ class ARShootingView: UIView, ARSessionDelegate {
 
             // ステージ１
             if self.gameInfo.gameState == .stage1 {
-
                 self.stage1Damage(entityAName: event.entityA.name, entityBName: event.entityB.name)
             }
+            // ステージ2
+            else if self.gameInfo.gameState == .stage2 {
+                self.stage2Damage(entityA: event.entityA, entityB: event.entityB)
+            }
+
         }.store(in: &collisionEventStreams)
     }
 
     func stage1Damage(entityAName: String, entityBName: String) {
-
         // 敵へのダメージ判定
         if  entityAName == EntityName.selfBullet &&
                 entityBName == stageModel.rocket1.name {
@@ -178,6 +206,49 @@ class ARShootingView: UIView, ARSessionDelegate {
         }
     }
 
+    func stage2Damage(entityA: Entity, entityB: Entity) {
+           // ゲーム終了
+           if  stageModel.rocket2.life <= 0 &&
+               stageModel.drummer2.life <= 0 &&
+               gameInfo.selfLife > 0 {
+               gameInfo.gameState = .endGame
+           }
+           else {
+               // ロケットへのダメージ判定
+               if  entityA.name == EntityName.selfBullet &&
+                   entityB.name == stageModel.rocket2.name {
+
+                   // ダメージ判定
+                   stageModel.rocket2.life -= 1
+
+                   // ヒット時のアクション
+                   hitAction(entity: entityB)
+               }
+               // ドラマーへのダメージ判定
+               else if  entityA.name == EntityName.selfBullet &&
+                   entityB.name == stageModel.drummer2.name {
+
+                   // ダメージ判定
+                   stageModel.drummer2.life -= 1
+
+                   // ヒット時のアクション
+                   hitAction(entity: entityB)
+               }
+           }
+    }
+
+    func hitAction(entity: Entity) {
+        //           // サウンド再生
+        //           let hitSound = try! AudioFileResource.load(named: "HitSound.wav")
+        //           entity.playAudio(hitSound)
+        do {
+            soundPlayer = try AVAudioPlayer(data: HitSound)
+            soundPlayer.play()
+        } catch {
+            print("音の再生に失敗しました。")
+        }
+    }
+
     // 敵の弾丸が定期的に発射されます
     @objc func stageBulletShot() {
         var stageInfo: [ModelInfo] = []
@@ -185,6 +256,10 @@ class ARShootingView: UIView, ARSessionDelegate {
         // ステージ1のモデル情報を取得
         if gameInfo.gameState == .stage1 {
             stageInfo = stageModel.stage1()
+        }
+        // ステージ2の情報を取得
+        else if gameInfo.gameState == .stage2 {
+            stageInfo = stageModel.stage2()
         }
 
         // 3Dコンテンツから弾丸発射
@@ -248,7 +323,7 @@ class ARShootingView: UIView, ARSessionDelegate {
 
         // ARAnchorをAnchorEntityに変換します
         let anchorEntity = AnchorEntity(anchor: anchor)
-        //          let anchorEntity = AnchorEntity() //previewのときのみ
+       //          let anchorEntity = AnchorEntity() //previewのときのみ
 
         anchorEntity.addChild(bulletEntity)
         arView.scene.addAnchor(anchorEntity)
@@ -264,7 +339,7 @@ class ARShootingView: UIView, ARSessionDelegate {
 
         // ARAnchorをAnchorEntityに変換します
         let anchorEntity = AnchorEntity(anchor: anchor)
-
+ //       let anchorEntity = AnchorEntity() //previewのみ
         // 自分自身の弾丸を生成
         let bulletEntity = BulletSphere(startPosition: anchorEntity.position, entityName: EntityName.selfBullet)
 
@@ -292,6 +367,12 @@ class ARShootingView: UIView, ARSessionDelegate {
         //          // 発射時にサウンド再生
         //          let hitSound = try! AudioFileResource.load(named: "ShootSound.wav")
         //          bulletEntity.bullet.playAudio(hitSound)
+        do {
+            soundPlayer = try AVAudioPlayer(data: HitSound)
+            soundPlayer.play()
+        } catch {
+            print("音の再生に失敗しました。")
+        }
 
         // 弾丸が0.4秒で端に到達するので、プラス0.1秒後に消します
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
